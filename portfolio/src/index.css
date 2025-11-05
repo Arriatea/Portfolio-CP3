@@ -42,7 +42,6 @@ body {
 }
 
 .float { animation: float 6s ease-in-out infinite; }
-.pulse-subtle { animation: pulse-subtle 4s ease-in-out infinite; }
 .fade-in { animation: fade-in 0.7s ease-out forwards; }
 .fade-in-delay-1 { animation: fade-in 0.7s ease-out 0.2s forwards; }
 .fade-in-delay-2 { animation: fade-in 0.7s ease-out 0.4s forwards; }
@@ -92,12 +91,17 @@ body {
 }
 
 .star {
-  position: absolute;
   border-radius: 50%;
   background: white;
   box-shadow: 0 0 10px 2px rgba(255,255,255,0.4);
+  pointer-events: none;
+  will-change: opacity, transform;
 }
 
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
 .meteor-shape {
   position: absolute;
   border-radius: 50%;
@@ -111,3 +115,4 @@ body {
   padding: 0;
   text-align: center;
 }
+
