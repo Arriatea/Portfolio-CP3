@@ -1,44 +1,46 @@
-import { Link, useLocation } from "react-router-dom"
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
-const cn = (...classes) => classes.filter(Boolean).join(" ")
+const cn = (...classes) => classes.filter(Boolean).join(" ");
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Sobre", href: "/sobre" },
-  { name: "Skills", href: "/skills" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contacts", href: "/contacts" },
-]
+  { name: "Home", href: "#home" },
+  { name: "About me", href: "#sobre" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contacts", href: "#contacts" },
+];
 
 export const NavBar = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const location = useLocation()
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md text-white shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md text-white shadow-md z-50 transition-all duration-300">
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
-        <Link to="/" className="text-2xl font-semibold tracking-wide">
-          <span className="text-purple-500">Marco</span> Portfolio
-        </Link>
+      
+        <a href="#home" className="text-2xl font-semibold tracking-wide">
+        </a>
 
-        <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="md:hidden focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           {menuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
 
+        {/* Itens Desktop */}
         <ul className="hidden md:flex space-x-8 text-lg">
           {navItems.map((item) => (
             <li key={item.name}>
-              <Link
-                to={item.href}
+              <a
+                href={item.href}
                 className={cn(
-                  "transition-colors duration-200 hover:text-purple-400",
-                  location.pathname === item.href ? "text-purple-500" : "text-white"
+                  "transition-colors hover:text-purple-400",
+                  "text-white"
                 )}
               >
                 {item.name}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -49,21 +51,18 @@ export const NavBar = () => {
           <ul className="flex flex-col items-center space-y-4 py-4">
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link
-                  to={item.href}
+                <a
+                  href={item.href}
                   onClick={() => setMenuOpen(false)}
-                  className={cn(
-                    "text-lg transition-colors duration-200 hover:text-purple-400",
-                    location.pathname === item.href ? "text-purple-500" : "text-white"
-                  )}
+                  className="text-lg text-white hover:text-purple-400 transition-colors"
                 >
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
         </div>
       )}
     </nav>
-  )
-}
+  );
+};
