@@ -4,6 +4,7 @@ import { Sobre } from "./Sobre";
 import { Skills } from "./Skills";
 import { Projects } from "./Projects";
 import { Contacts } from "./Contacts";
+import { Button } from "../Components/Button";
 
 export const Home = () => {
   return (
@@ -19,20 +20,22 @@ export const Home = () => {
           Hi, I'm <span className="text-purple-400">Marco Aurélio</span>
         </h1>
 
-    <p className="text-2xl text-gray-300 max-w-2xl mb-8 leading-relaxed">
-    A Software Engineering student on a focused journey to become a Machine Learning Engineer. Constantly exploring new technologies, improving my technical depth, and building intelligent systems.
-  </p>
+        <p className="text-2xl text-gray-300 max-w-2xl mb-8 leading-relaxed">
+          A Software Engineering student on a focused journey to become a
+          Machine Learning Engineer. Constantly exploring new technologies,
+          improving my technical depth, and building intelligent systems.
+        </p>
 
-        <button
+        <Button
           onClick={() =>
             document
               .getElementById("projects")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-medium transition-transform hover:scale-105 shadow-md"
         >
           View My Work
-        </button>
+        </Button>
 
         <div className="absolute bottom-10 text-gray-400 animate-pulse">
           <span>Scroll</span>

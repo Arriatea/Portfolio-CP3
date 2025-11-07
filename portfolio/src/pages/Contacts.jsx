@@ -14,9 +14,6 @@ export const Contacts = () => {
           Talk to me
         </h2>
 
-        <p className="text-lg text-gray-300">
-          Feel free to reach out for collaborations, project discussions, or just to connect.
-        </p>
 
         <div className="flex flex-wrap justify-center gap-10 mt-10">
           <a
