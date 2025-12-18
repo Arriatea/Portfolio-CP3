@@ -5,7 +5,7 @@ const cn = (...classes) => classes.filter(Boolean).join(" ");
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "About me", href: "#sobre" },
+  { name: "About me", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contacts", href: "#contacts" },

@@ -1,6 +1,6 @@
 import { FundoEstrela } from "../Components/FundoEstrela";
 import { NavBar } from "../Components/NavBar";
-import { Sobre } from "./Sobre";
+import { Sobre } from "./About";
 import { Skills } from "./Skills";
 import { Projects } from "./Projects";
 import { Contacts } from "./Contacts";

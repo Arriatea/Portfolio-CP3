@@ -3,7 +3,8 @@ import fotoPerfil from "../assets/imgs/fotodeperfil.png"
 
 export const Sobre = () => {
   return (
-    <section id="sobre" className="relative min-h-screen bg-fundo text-white flex items-center justify-center text-center py-20 px-6 overflow-hidden">
+    <section id="about"
+     className="relative min-h-screen bg-fundo text-white flex items-center justify-center text-center py-20 px-6 overflow-hidden">
 
       <FundoEstrela />
 
