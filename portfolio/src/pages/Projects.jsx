@@ -1,6 +1,7 @@
 import hidroguardImg from "../assets/imgs/projeto-hidroguard.png";
 import passaBolaImg from "../assets/imgs/projeto-passabola.png";
 import adaptaiImg from "../assets/imgs/projeto-adaptai.png";
+import coffeConnectImg from "../assets/imgs/projeto-coffeeconnect.png";
 
 export const Projects = () => {
   const projects = [
@@ -38,7 +39,6 @@ export const Projects = () => {
         "Vertex AI",
         "Firebase",
         "Firestore",
-        "TensorFlow",
         "VertexAi",
         "DialogFlow"
       ],
@@ -50,6 +50,27 @@ export const Projects = () => {
         "Firestore manages real-time user data and interaction preferences.",
         "Integrates OpenAI API for natural language understanding and user feedback.",
         "Ongoing production development focused on accessibility and UX testing.",
+      ],
+    },
+    {
+      title: "Coffe Conect",
+      desc: "CoffeeConnect is an IoT-based system designed to monitor employee break times in real time within corporate environments. Built with ESP32, MQTT, and Node-RED, the solution tracks when users start or end a break through a physical button, visualizes the data on a live dashboard, and provides clear visual feedback using an RGB LED.",
+      tech: [
+       "Node-RED",
+        "MQTT",
+        "IoT",
+        "Sensors"
+      ],
+      img: coffeConnectImg,
+      link: "https://github.com/Arriatea/GS-2-Edge_Computing",
+      details: [
+        "ESP32 publishes real-time break state updates to an MQTT broker.",
+        "Physical button works in toggle mode to start or end a break.",
+        "RGB LED provides immediate visual feedback for active and break states.",
+        "Node-RED processes MQTT messages and displays live counters and charts.",
+        "Dashboard updates instantly with the number of people currently on break.",
+        "System includes safeguards to prevent invalid states, such as negative counts.",
+        "Entire flow was simulated and tested using Wokwi before deployment."
       ],
     },
   ];
